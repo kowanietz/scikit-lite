@@ -60,9 +60,7 @@ class SGDRegressor(LinearModel, RegressorMixin):
         if y.ndim != 1:
             raise ValueError(f"y must be 1D array, got {y.ndim}D")
         if X.shape[0] != y.shape[0]:
-            raise ValueError(
-                f"X and y have incompatible shapes: {X.shape[0]} vs {y.shape[0]}"
-            )
+            raise ValueError(f"X and y have incompatible shapes: {X.shape[0]} vs {y.shape[0]}")
 
         n_samples, n_features = X.shape
         self.n_features_in_ = n_features
@@ -160,9 +158,7 @@ class LinearRegression(LinearModel, RegressorMixin):
         if y.ndim != 1:
             raise ValueError(f"y must be 1D array, got {y.ndim}D")
         if X.shape[0] != y.shape[0]:
-            raise ValueError(
-                f"X and y have incompatible shapes: {X.shape[0]} vs {y.shape[0]}"
-            )
+            raise ValueError(f"X and y have incompatible shapes: {X.shape[0]} vs {y.shape[0]}")
 
         n_samples, n_features = X.shape
         self.n_features_in_ = n_features
