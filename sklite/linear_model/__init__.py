@@ -1,3 +1,3 @@
-from sklite.linear_model.linear_regression import LinearRegression
+from sklite.linear_model.linear_regression import SGDRegressor, LinearRegression
 
-__all__ = ["LinearRegression"]
+__all__ = ["SGDRegressor", "LinearRegression"]
