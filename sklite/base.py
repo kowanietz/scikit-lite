@@ -1,6 +1,6 @@
 from abc import ABCMeta
 
-__all__ = ["BaseEstimator", "RegressorMixin"]
+__all__ = ["BaseEstimator", "RegressorMixin", "ClassifierMixin"]
 
 
 class BaseEstimator(metaclass=ABCMeta):
@@ -30,3 +30,11 @@ class RegressorMixin:
 
         y_pred = self.predict(X)
         return r2_score(y, y_pred)
+
+
+class ClassifierMixin:
+    def score(self, X, y):
+        from .metrics import accuracy_score
+
+        y_pred = self.predict(X)
+        return accuracy_score(y, y_pred)

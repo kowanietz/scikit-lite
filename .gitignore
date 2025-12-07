@@ -18,6 +18,7 @@ env.bak/
 
 build/
 dist/
+dev/
 *.egg-info/
 MANIFEST
 *.egg
