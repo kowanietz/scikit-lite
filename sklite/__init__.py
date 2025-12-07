@@ -4,6 +4,7 @@ __version__ = "0.0.1a0"
 
 import warnings
 
+from sklite.cluster import KMeans
 from sklite.linear_model import LinearRegression, LogisticRegression, SGDRegressor
 from sklite.metrics import (
     accuracy_score,
@@ -16,6 +17,7 @@ from sklite.metrics import (
 __all__ = [
     "LinearRegression",
     "LogisticRegression",
+    "KMeans",
     "SGDRegressor",
     "accuracy_score",
     "mean_absolute_error",
