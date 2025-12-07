@@ -1,6 +1,6 @@
 from abc import ABCMeta
 
-__all__ = ["BaseEstimator", "RegressorMixin", "ClassifierMixin"]
+__all__ = ["BaseEstimator", "RegressorMixin", "ClassifierMixin", "ClusterMixin"]
 
 
 class BaseEstimator(metaclass=ABCMeta):
@@ -38,3 +38,9 @@ class ClassifierMixin:
 
         y_pred = self.predict(X)
         return accuracy_score(y, y_pred)
+
+
+class ClusterMixin:
+    def fit_predict(self, X, y=None):
+        self.fit(X)
+        return self.predict(X)
