@@ -2,6 +2,8 @@
 
 __version__ = "0.0.1a0"
 
+import warnings
+
 from sklite.linear_model import LinearRegression, LogisticRegression, SGDRegressor
 from sklite.metrics import (
     accuracy_score,
@@ -21,3 +23,9 @@ __all__ = [
     "r2_score",
     "root_mean_squared_error",
 ]
+
+warnings.warn(
+    "This library is in pre-alpha stage. APIs may change without notice.",
+    category=UserWarning,
+    stacklevel=2,
+)
