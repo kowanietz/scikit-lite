@@ -116,7 +116,7 @@ class KMeans(ClusterMixin, BaseEstimator):
         # Check if fitted
         if not hasattr(self, "cluster_centers_"):
             raise ValueError(
-                "This KMeans instance is not fitted yet. " "Call 'fit' before using this method."
+                "This KMeans instance is not fitted yet. Call 'fit' before using this method."
             )
 
         # Convert to numpy array

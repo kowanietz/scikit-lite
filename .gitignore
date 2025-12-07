@@ -83,3 +83,6 @@ desktop.ini
 
 *.code-workspace
 *.iml
+
+# Rust
+target/

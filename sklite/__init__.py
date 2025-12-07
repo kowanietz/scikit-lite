@@ -4,6 +4,19 @@ __version__ = "0.0.1a0"
 
 import warnings
 
+try:
+    from sklite._core import rust_health_check
+except ImportError:
+    warnings.warn(
+        "Rust extensions not available.",
+        category=ImportWarning,
+        stacklevel=2,
+    )
+
+    def rust_health_check():
+        return "Rust extensions not available."
+
+
 from sklite.cluster import KMeans
 from sklite.linear_model import LinearRegression, LogisticRegression, SGDRegressor
 from sklite.metrics import (
@@ -24,6 +37,7 @@ __all__ = [
     "mean_squared_error",
     "r2_score",
     "root_mean_squared_error",
+    "rust_health_check",
 ]
 
 warnings.warn(
