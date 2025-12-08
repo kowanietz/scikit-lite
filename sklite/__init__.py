@@ -21,9 +21,12 @@ from sklite.cluster import KMeans
 from sklite.linear_model import LinearRegression, LogisticRegression, SGDRegressor
 from sklite.metrics import (
     accuracy_score,
+    f1_score,
     mean_absolute_error,
     mean_squared_error,
+    precision_score,
     r2_score,
+    recall_score,
     root_mean_squared_error,
 )
 
@@ -38,6 +41,9 @@ __all__ = [
     "r2_score",
     "root_mean_squared_error",
     "rust_health_check",
+    "precision_score",
+    "recall_score",
+    "f1_score",
 ]
 
 warnings.warn(
